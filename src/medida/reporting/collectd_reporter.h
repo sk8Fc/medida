@@ -8,17 +8,24 @@
 #include <cstdint>
 #include <memory>
 #include <string>
+#include <mutex>
+#include <iostream>
+#include <iomanip>
+#include <sstream>
 
+#include <netdb.h>
+#include <string.h>
+#include <sys/utsname.h>
+
+#include "medida/reporting/util.h"
 #include "medida/metrics_registry.h"
 #include "medida/metric_processor.h"
 #include "medida/reporting/abstract_polling_reporter.h"
 
 namespace medida {
-namespace reporting {
-
-
-class CollectdReporter : public AbstractPollingReporter, MetricProcessor {
- public:
+    namespace reporting {
+        class CollectdReporter : public AbstractPollingReporter, MetricProcessor {
+        public:
   CollectdReporter(MetricsRegistry &registry, const std::string& hostname = "127.0.0.1", std::uint16_t port = 25826);
   virtual ~CollectdReporter();
   virtual void Run();
@@ -26,13 +33,13 @@ class CollectdReporter : public AbstractPollingReporter, MetricProcessor {
   virtual void Process(Meter& meter);
   virtual void Process(Histogram& histogram);
   virtual void Process(Timer& timer);
+  virtual void Process(Value &value);
  private:
   class Impl;
   std::unique_ptr<Impl> impl_;
-};
+            };
 
-
-} // namespace reporting
+    } // namespace reporting
 } // namespace medida
 
 #endif // MEDIDA_REPORTING_COLLECTD_REPORTER_H_

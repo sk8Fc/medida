@@ -11,6 +11,7 @@ namespace medida {
     class Meter;
     class MetricInterface;
     class Timer;
+    class Value;
 
     class MetricProcessor {
         public:

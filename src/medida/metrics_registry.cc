@@ -20,6 +20,8 @@ namespace medida {
                     SamplingInterface::SampleType sample_type = SamplingInterface::kUniform);
             Meter& NewMeter(const MetricName &name, std::string event_type, 
                     Clock::duration rate_unit = std::chrono::seconds(1));
+
+            Value& NewValue(const MetricName &name);
             Timer& NewTimer(const MetricName &name,
                     std::chrono::nanoseconds duration_unit = std::chrono::milliseconds(1),
                     std::chrono::nanoseconds rate_unit = std::chrono::seconds(1));
@@ -50,8 +52,8 @@ namespace medida {
         return impl_->NewHistogram(name, sample_type);
     }
 
-    Value &MetricsRegistry::NewValue(const MetricName &name){
-        return newMetric<Value>(name);
+    Value& MetricsRegistry::NewValue(const MetricName &name){
+        return impl_->NewValue(name);
     }
 
     Meter& MetricsRegistry::NewMeter(const MetricName &name, std::string event_type,
@@ -102,6 +104,10 @@ namespace medida {
     Timer& MetricsRegistry::Impl::NewTimer(const MetricName &name, std::chrono::nanoseconds duration_unit,
             std::chrono::nanoseconds rate_unit) {
         return NewMetric<Timer>(name, duration_unit, rate_unit);
+    }
+
+    Value& MetricsRegistry::Impl::NewValue(const MetricName &name){
+        return NewMetric<Value>(name);
     }
 
 

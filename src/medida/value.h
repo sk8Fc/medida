@@ -21,7 +21,7 @@ namespace medida {
 
         std::uint64_t value() const;
 
-        void process(MetricProcessor &processor);
+        void Process(MetricProcessor &processor);
 
         void clear();
 

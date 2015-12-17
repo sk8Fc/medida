@@ -12,8 +12,8 @@ namespace medida {
     Value::~Value() {
     }
 
-    void Value::process(MetricProcessor &processor) {
-        processor.process(*this);
+    void Value::Process(MetricProcessor &processor) {
+        processor.Process(*this);
     }
 
     void Value::clear() {

@@ -1,17 +1,17 @@
 #include "medida/medida.h"
+#include <unistd.h>
 
-int main(int argc, char* argv[]) {
+int main() {
     medida::MetricsRegistry registry;
     auto& counter = registry.NewCounter({"foo", "bar", "baz"});
     counter.inc();
 
-    medida::MetricsRegistry registry;
     medida::reporting::CollectdReporter collectdReporter(registry);
-    collectdReporter.start(std::chrono::seconds(1));
+    collectdReporter.Start(std::chrono::seconds(1));
     //    auto &histogram = registry.histogram({"histogram", "bar", "baz"}, medida::SamplingInterface::kUniform);
     //    auto &timer = registry.timer({"test", "bar", "baz"});
     //    auto &meter = registry.meter({"foo1", "bar", "baz"}, "things");
-    auto &value = registry.value({"fooo", "bar", "value"});
+    auto &value = registry.NewValue({"fooo", "bar", "value"});
     for (int i = 0; i < 10000000; ++i) {
 
         long ts = rand() % 556;
@@ -26,6 +26,6 @@ int main(int argc, char* argv[]) {
     }
 
 
-    collectdReporter.shutdown();
+    collectdReporter.Shutdown();
     return 0;
 }

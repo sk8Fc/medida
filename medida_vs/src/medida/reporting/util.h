@@ -8,6 +8,8 @@
 #include <chrono>
 #include <string>
 
+#include "medida/medida_dll.h"
+
 namespace medida {
 namespace reporting {
 

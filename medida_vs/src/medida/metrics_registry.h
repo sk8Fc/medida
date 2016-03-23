@@ -10,6 +10,7 @@
 #include <memory>
 #include <string>
 
+#include "medida/medida_dll.h"
 #include "medida/counter.h"
 #include "medida/histogram.h"
 #include "medida/meter.h"
@@ -20,7 +21,7 @@
 #include "medida/value.h"
 
 namespace medida {
-    class MetricsRegistry {
+    class DLLEXPORT MetricsRegistry {
         public:
             MetricsRegistry();
             ~MetricsRegistry();

@@ -5,11 +5,12 @@
 #ifndef MEDIDA_METERED_INTERFACE_H_
 #define MEDIDA_METERED_INTERFACE_H_
 
+#include "medida/medida_dll.h"
 #include "medida/types.h"
 
 namespace medida {
 
-class MeteredInterface {
+class DLLEXPORT MeteredInterface {
 public:
   virtual ~MeteredInterface() {};
   virtual std::chrono::nanoseconds rate_unit() const = 0;

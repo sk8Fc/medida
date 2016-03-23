@@ -8,11 +8,12 @@
 #include <cstdint>
 #include <memory>
 
+#include "medida/medida_dll.h"
 #include "medida/metric_interface.h"
 
 namespace medida {
 
-class Counter : public MetricInterface {
+class DLLEXPORT Counter : public MetricInterface {
  public:
   Counter(std::int64_t init = 0);
   ~Counter();

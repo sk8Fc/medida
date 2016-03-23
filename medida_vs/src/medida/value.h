@@ -4,6 +4,7 @@
 #include <cmath>
 #include <mutex>
 
+#include "medida/medida_dll.h"
 #include "medida/metric_interface.h"
 #include "medida/sampling_interface.h"
 #include "medida/summarizable_interface.h"
@@ -11,7 +12,7 @@
 
 namespace medida {
 
-    class Value : public MetricInterface {
+    class DLLEXPORT Value : public MetricInterface {
     public:
         Value();
 

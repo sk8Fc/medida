@@ -102,6 +102,9 @@
     <ClInclude Include="src\medida\stats\sample.h">
       <Filter>Fichiers d%27en-tête\stats</Filter>
     </ClInclude>
+    <ClInclude Include="src\medida\medida_dll.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\medida\counter.cc">

@@ -5,13 +5,13 @@
 #ifndef MEDIDA_METRIC_NAME_H_
 #define MEDIDA_METRIC_NAME_H_
 
-
+#include "medida/medida_dll.h"
 #include <memory>
 #include <string>
 
 namespace medida {
 
-class MetricName {
+class DLLEXPORT MetricName {
  public:
   MetricName(const std::string &domain, const std::string &type, const std::string &name, const std::string &scope = "");
   MetricName(const MetricName& other);

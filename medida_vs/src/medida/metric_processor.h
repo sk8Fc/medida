@@ -5,6 +5,8 @@
 #ifndef MEDIDA_METRIC_PROCESSOR_H_
 #define MEDIDA_METRIC_PROCESSOR_H_
 
+#include "medida/medida_dll.h"
+
 namespace medida {
     class Counter;
     class Histogram;
@@ -13,7 +15,7 @@ namespace medida {
     class Timer;
     class Value;
 
-    class MetricProcessor {
+    class DLLEXPORT MetricProcessor {
         public:
             virtual ~MetricProcessor();
             virtual void Process(Counter& counter);

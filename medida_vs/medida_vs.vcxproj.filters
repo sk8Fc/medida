@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\reporting">
+      <UniqueIdentifier>{afb9d259-d972-4fef-994d-bbf64f0a3951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\stats">
+      <UniqueIdentifier>{9cddbdbb-5426-41af-9bf6-8631ae97fde5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\reporting">
+      <UniqueIdentifier>{c23ebfeb-9612-40a3-93c3-d454356a9e73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête\stats">
+      <UniqueIdentifier>{7bf3dd26-a805-494d-9433-f7f006e0574c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\medida\metric_name.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\metric_processor.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\metrics_registry.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\sampling_interface.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\summarizable_interface.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\timer.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\timer_context.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\types.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\value.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\counter.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\histogram.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\medida.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\meter.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\metered_interface.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\metric_interface.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\reporting\util.h">
+      <Filter>Fichiers d%27en-tête\reporting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\reporting\abstract_polling_reporter.h">
+      <Filter>Fichiers d%27en-tête\reporting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\reporting\collectd_reporter.h">
+      <Filter>Fichiers d%27en-tête\reporting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\reporting\console_reporter.h">
+      <Filter>Fichiers d%27en-tête\reporting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\reporting\json_reporter.h">
+      <Filter>Fichiers d%27en-tête\reporting</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\stats\snapshot.h">
+      <Filter>Fichiers d%27en-tête\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\stats\uniform_sample.h">
+      <Filter>Fichiers d%27en-tête\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\stats\ewma.h">
+      <Filter>Fichiers d%27en-tête\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\stats\exp_decay_sample.h">
+      <Filter>Fichiers d%27en-tête\stats</Filter>
+    </ClInclude>
+    <ClInclude Include="src\medida\stats\sample.h">
+      <Filter>Fichiers d%27en-tête\stats</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\medida\counter.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\histogram.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\meter.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\metric_name.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\metric_processor.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\metrics_registry.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\timer.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\timer_context.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\value.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\reporting\console_reporter.cc">
+      <Filter>Fichiers sources\reporting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\reporting\json_reporter.cc">
+      <Filter>Fichiers sources\reporting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\reporting\util.cc">
+      <Filter>Fichiers sources\reporting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\reporting\abstract_polling_reporter.cc">
+      <Filter>Fichiers sources\reporting</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\stats\snapshot.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\stats\uniform_sample.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\stats\ewma.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="src\medida\stats\exp_decay_sample.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

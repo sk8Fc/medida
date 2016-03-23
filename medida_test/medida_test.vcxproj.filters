@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Fichiers sources\reporting">
+      <UniqueIdentifier>{5d40d274-b272-4f1e-b87e-fdfeb7988b9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers sources\stats">
+      <UniqueIdentifier>{54ac7904-9897-449c-bf22-24210dc77ae6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test\test_meter.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_metric_name.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_metrics_registry.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_timer.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_value.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_counter.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\test_histogram.cc">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stats\test_snapshot.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stats\test_uniform_sample.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stats\test_ewma.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="test\stats\test_exp_decay_sample.cc">
+      <Filter>Fichiers sources\stats</Filter>
+    </ClCompile>
+    <ClCompile Include="test\reporting\test_console_reporter.cc">
+      <Filter>Fichiers sources\reporting</Filter>
+    </ClCompile>
+    <ClCompile Include="test\reporting\test_json_reporter.cc">
+      <Filter>Fichiers sources\reporting</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+</Project>

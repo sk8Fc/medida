@@ -8,11 +8,13 @@
 #include <chrono>
 #include <memory>
 
+#include "medida/medida_dll.h"
+
 namespace medida {
 
 class Timer;
 
-class TimerContext {
+class DLLEXPORT TimerContext {
  public:
   TimerContext(Timer& timer);
   TimerContext(TimerContext &&);

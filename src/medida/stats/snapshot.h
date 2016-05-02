@@ -8,10 +8,12 @@
 #include <memory>
 #include <vector>
 
+#include "medida/medida_dll.h"
+
 namespace medida {
 namespace stats {
 
-class Snapshot {
+class DLLEXPORT Snapshot {
  public:
   Snapshot(const std::vector<double>& values);
   ~Snapshot();

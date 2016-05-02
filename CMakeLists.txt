@@ -49,6 +49,7 @@ set(medida_SOURCES
 
 set(medida_HEADERS
   src/medida/medida.h
+  src/medida/medida_dll.h
   src/medida/counter.h
   src/medida/histogram.h
   src/medida/meter.h
@@ -104,6 +105,7 @@ install(TARGETS medida
 
 install(FILES
   src/medida/medida.h
+  src/medida/medida_test.h
   src/medida/counter.h
   src/medida/histogram.h
   src/medida/meter.h

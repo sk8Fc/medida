@@ -5,9 +5,11 @@
 #ifndef MEDIDA_SUMMARIZABLE_INTERFACE_H_
 #define MEDIDA_SUMMARIZABLE_INTERFACE_H_
 
+#include "medida/medida_dll.h"
+
 namespace medida {
 
-class SummarizableInterface {
+class DLLEXPORT SummarizableInterface {
 public:
   virtual ~SummarizableInterface() {};
   virtual double max() const = 0;

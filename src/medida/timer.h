@@ -10,6 +10,7 @@
 #include <functional>
 #include <memory>
 
+#include "medida/medida_dll.h"
 #include "medida/metered_interface.h"
 #include "medida/metric_interface.h"
 #include "medida/metric_processor.h"
@@ -19,7 +20,7 @@
 
 namespace medida {
 
-class Timer : public MetricInterface, MeteredInterface, SamplingInterface, SummarizableInterface {
+class DLLEXPORT Timer : public MetricInterface, MeteredInterface, SamplingInterface, SummarizableInterface {
  public:
   Timer(std::chrono::nanoseconds duration_unit = std::chrono::milliseconds(1),
       std::chrono::nanoseconds rate_unit = std::chrono::seconds(1));

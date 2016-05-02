@@ -9,10 +9,12 @@
 #include <cstdint>
 #include <memory>
 
+#include "medida/medida_dll.h"
+
 namespace medida {
 namespace stats {
 
-class EWMA {
+class DLLEXPORT EWMA {
  public:
   EWMA() = delete;
   EWMA(double alpha, std::chrono::nanoseconds interval);

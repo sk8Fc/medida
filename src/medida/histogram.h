@@ -8,6 +8,7 @@
 #include <cstdint>
 #include <memory>
 
+#include "medida/medida_dll.h"
 #include "medida/metric_interface.h"
 #include "medida/sampling_interface.h"
 #include "medida/summarizable_interface.h"
@@ -15,7 +16,7 @@
 
 namespace medida {
 
-class Histogram : public MetricInterface, SamplingInterface, SummarizableInterface {
+class DLLEXPORT Histogram : public MetricInterface, SamplingInterface, SummarizableInterface {
  public:
   Histogram(SampleType sample_type = kUniform);
   ~Histogram();

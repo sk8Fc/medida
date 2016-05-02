@@ -5,11 +5,12 @@
 #ifndef MEDIDA_SAMPLING_INTERFACE_H_
 #define MEDIDA_SAMPLING_INTERFACE_H_
 
+#include "medida/medida_dll.h"
 #include "medida/stats/snapshot.h"
 
 namespace medida {
 
-class SamplingInterface {
+class DLLEXPORT SamplingInterface {
 public:
   enum SampleType { kUniform, kBiased };
   virtual ~SamplingInterface() {};

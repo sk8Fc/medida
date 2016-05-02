@@ -9,6 +9,7 @@
 #include <memory>
 #include <string>
 
+#include "medida/medida_dll.h"
 #include "medida/stats/ewma.h"
 #include "medida/metered_interface.h"
 #include "medida/metric_interface.h"
@@ -17,7 +18,7 @@
 
 namespace medida {
 
-class Meter : public MetricInterface, MeteredInterface {
+class DLLEXPORT Meter : public MetricInterface, MeteredInterface {
  public:
   Meter(std::string event_type, std::chrono::nanoseconds rate_unit = std::chrono::seconds(1));
   ~Meter();

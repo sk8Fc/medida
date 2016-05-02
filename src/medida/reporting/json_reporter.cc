@@ -9,7 +9,7 @@
 #include <mutex>
 #include <sstream>
 #ifdef _WIN32
-#include <Winsock2.h>
+#include <winSock2.h>
 #else
 #include <sys/utsname.h>
 #endif
@@ -79,14 +79,15 @@ JsonReporter::Impl::Impl(JsonReporter& self, MetricsRegistry &registry)
       registry_ (registry) {
 #ifdef _WIN32
 	char nameBuf[128];
-	if (gethostname(nameBuf, sizeof(nameBuf)) == 0)
-	{
-		uname_ = std::string(nameBuf);
-	}
-	else
-	{
-		uname_ = std::string("localhost");
-	}
+	// Todo: need fix bug 'winsock2.h' for vs 2015
+	//if (gethostname(nameBuf, sizeof(nameBuf)) == 0)
+	//{
+	//	uname_ = std::string(nameBuf);
+	//}
+	//else
+	//{
+	//	uname_ = std::string("localhost");
+	//}
 #else
   utsname name;
   uname_ = {uname(&name) ? "localhost" : name.nodename};
@@ -105,8 +106,9 @@ std::string JsonReporter::Impl::Report() {
   std::tm tm;
 #ifdef _WIN32
     // On Win32 this is returns a thread-local and there's no _r variant.
-    std::tm *tmPtr = gmtime(&t);
-    tm = *tmPtr;
+	// std::tm *tmPtr;
+	gmtime_s(&tm, &t);
+    // tm = *tmPtr;
 #else
     // On unix the _r variant uses a local output, so is threadsafe.
     gmtime_r(&t, &tm);

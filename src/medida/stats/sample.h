@@ -8,12 +8,13 @@
 #include <cstddef>
 #include <cstdint>
 
+#include "medida/medida_dll.h"
 #include "medida/stats/snapshot.h"
 
 namespace medida {
 namespace stats {
 
-class Sample {
+class DLLEXPORT Sample {
 public:
   virtual ~Sample() {};
   virtual void Clear() = 0;

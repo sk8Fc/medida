@@ -7,12 +7,13 @@
 
 #include <memory>
 
+#include "medida/medida_dll.h"
 #include "medida/types.h"
 
 namespace medida {
 namespace reporting {
 
-class AbstractPollingReporter {
+class DLLEXPORT AbstractPollingReporter {
  public:
   AbstractPollingReporter();
   virtual ~AbstractPollingReporter();

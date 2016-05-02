@@ -14,7 +14,7 @@
 namespace medida {
 namespace reporting {
 
-class JsonReporter : public MetricProcessor {
+class DLLEXPORT JsonReporter : public MetricProcessor {
  public:
   JsonReporter(MetricsRegistry &registry);
   virtual ~JsonReporter();

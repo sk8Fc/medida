@@ -8,13 +8,14 @@
 #include <cstdint>
 #include <memory>
 
+#include "medida/medida_dll.h"
 #include "medida/stats/sample.h"
 #include "medida/stats/snapshot.h"
 
 namespace medida {
 namespace stats {
 
-class UniformSample : public Sample {
+class DLLEXPORT UniformSample : public Sample {
  public:
   UniformSample(std::uint32_t reservoirSize);
   ~UniformSample();

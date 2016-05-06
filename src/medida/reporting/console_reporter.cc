@@ -3,6 +3,7 @@
 //
 
 #include "medida/reporting/console_reporter.h"
+#include "medida/reporting/util.h"
 
 #include <iomanip>
 #include <iostream>
@@ -26,7 +27,7 @@ class ConsoleReporter::Impl {
   ConsoleReporter& self_;
   medida::MetricsRegistry& registry_;
   std::ostream& out_;
-  std::string FormatRateUnit(const std::chrono::nanoseconds& rate_unit) const;
+  //std::string FormatRateUnit(const std::chrono::nanoseconds& rate_unit) const;
 };
 
 
@@ -142,30 +143,6 @@ void ConsoleReporter::Impl::Process(Timer& timer) {
        << "           99.9% = " << snapshot.get999thPercentile() << unit << std::endl;
 }
 
-
-std::string ConsoleReporter::Impl::FormatRateUnit(const std::chrono::nanoseconds& rate_unit) const {
-  static auto one_day = std::chrono::nanoseconds(std::chrono::hours(24)).count();
-  static auto one_hour = std::chrono::nanoseconds(std::chrono::hours(1)).count();
-  static auto one_minute = std::chrono::nanoseconds(std::chrono::minutes(1)).count();
-  static auto one_seconds = std::chrono::nanoseconds(std::chrono::seconds(1)).count();
-  static auto one_millisecond = std::chrono::nanoseconds(std::chrono::milliseconds(1)).count();
-  static auto one_microsecond = std::chrono::nanoseconds(std::chrono::microseconds(1)).count();
-  auto unit_count = rate_unit.count();
-  if (unit_count >= one_day ) {
-    return "d";
-  } else if (unit_count >= one_hour) {
-    return "h";
-  } else if (unit_count >= one_minute) {
-    return "m";
-  } else if (unit_count >= one_seconds) {
-    return "s";
-  } else if (unit_count >= one_millisecond) {
-    return "ms";
-  } else if (unit_count >= one_microsecond) {
-    return "us";
-  }
-  return "ns";
-}
 
 
 } // namespace reporting

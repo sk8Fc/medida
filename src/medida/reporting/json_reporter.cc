@@ -9,7 +9,8 @@
 #include <mutex>
 #include <sstream>
 #ifdef _WIN32
-#include <winSock2.h>
+#	include <winSock2.h>
+#	pragma comment(lib, "WS2_32.lib")
 #else
 #include <sys/utsname.h>
 #endif
@@ -79,15 +80,14 @@ JsonReporter::Impl::Impl(JsonReporter& self, MetricsRegistry &registry)
       registry_ (registry) {
 #ifdef _WIN32
 	char nameBuf[128];
-	// Todo: need fix bug 'winsock2.h' for vs 2015
-	//if (gethostname(nameBuf, sizeof(nameBuf)) == 0)
-	//{
-	//	uname_ = std::string(nameBuf);
-	//}
-	//else
-	//{
-	//	uname_ = std::string("localhost");
-	//}
+	if (gethostname(nameBuf, sizeof(nameBuf)) == 0)
+	{
+		uname_ = std::string(nameBuf);
+	}
+	else
+	{
+		uname_ = std::string("localhost");
+	}
 #else
   utsname name;
   uname_ = {uname(&name) ? "localhost" : name.nodename};

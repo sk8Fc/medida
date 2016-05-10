@@ -27,7 +27,6 @@ class ConsoleReporter::Impl {
   ConsoleReporter& self_;
   medida::MetricsRegistry& registry_;
   std::ostream& out_;
-  //std::string FormatRateUnit(const std::chrono::nanoseconds& rate_unit) const;
 };
 
 

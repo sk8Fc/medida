@@ -79,29 +79,7 @@ JsonReporter::Impl::Impl(JsonReporter& self, MetricsRegistry &registry)
     : self_     (self),
       registry_ (registry) {
 #ifdef _WIN32
-	char nameBuf[128] = {};
-
-	WORD wVersionRequested;
-	WSADATA wsaData;
-	int err;
-
-	wVersionRequested = MAKEWORD(2, 2);
-	err = WSAStartup(wVersionRequested, &wsaData);
-	if (err != 0) {
-		// WSAStartup failed with error
-	}
-	
-
-	if (gethostname(nameBuf, sizeof(nameBuf)) == 0)
-	{
-		uname_ = std::string(nameBuf);
-	}
-	else
-	{
-		uname_ = std::string("localhost");
-	}
-
-	WSACleanup();
+	uname_ = GetHostName();
 #else
   utsname name;
   uname_ = {uname(&name) ? "localhost" : name.nodename};

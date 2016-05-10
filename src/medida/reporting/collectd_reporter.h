@@ -13,9 +13,7 @@
 #include <iomanip>
 #include <sstream>
 
-#include <netdb.h>
 #include <string.h>
-#include <sys/utsname.h>
 
 #include "medida/reporting/util.h"
 #include "medida/metrics_registry.h"
@@ -24,7 +22,7 @@
 
 namespace medida {
     namespace reporting {
-        class CollectdReporter : public AbstractPollingReporter, MetricProcessor {
+        class DLLEXPORT CollectdReporter : public AbstractPollingReporter, MetricProcessor {
             public:
                 CollectdReporter(MetricsRegistry &registry, const std::string& hostname = "127.0.0.1", std::uint16_t port = 25826);
                 virtual ~CollectdReporter();

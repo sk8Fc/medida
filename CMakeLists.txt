@@ -43,6 +43,8 @@ set(medida_SOURCES
   src/medida/reporting/collectd_reporter.cc
   src/medida/reporting/console_reporter.cc
   src/medida/reporting/json_reporter.cc
+  src/medida/reporting/udp_client.cc
+  src/medida/reporting/udp_json_reporter.cc
   src/medida/reporting/util.cc
   src/medida/histogram.cc
 )
@@ -67,6 +69,8 @@ set(medida_HEADERS
   src/medida/reporting/collectd_reporter.h
   src/medida/reporting/console_reporter.h
   src/medida/reporting/json_reporter.h
+  src/medida/reporting/udp_client.h
+  src/medida/reporting/udp_json_reporter.h
   src/medida/reporting/util.h
   src/medida/stats/ewma.h
   src/medida/stats/exp_decay_sample.h
@@ -129,6 +133,8 @@ install(FILES
   src/medida/reporting/console_reporter.h
   src/medida/reporting/json_reporter.h
   src/medida/reporting/util.h
+  src/medida/reporting/udp_client.h
+  src/medida/reporting/udp_json_reporter.h
   DESTINATION include/medida/reporting/
 )
 

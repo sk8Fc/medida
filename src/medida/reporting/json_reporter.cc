@@ -79,7 +79,9 @@ JsonReporter::Impl::Impl(JsonReporter& self, MetricsRegistry &registry)
     : self_     (self),
       registry_ (registry) {
 #ifdef _WIN32
+	MyWSAStartup();
 	uname_ = GetHostName();
+	WSACleanup();
 #else
   utsname name;
   uname_ = {uname(&name) ? "localhost" : name.nodename};

@@ -3,14 +3,12 @@
 
 #include "medida/reporting/abstract_polling_reporter.h"
 #include "medida/reporting/json_reporter.h"
-#include "medida/reporting/udp_client.h"
 
 namespace medida {
 namespace reporting {
 
 class DLLEXPORT UDPJsonReporter : public JsonReporter,
-                                  public AbstractPollingReporter,
-								  public UDPClient{
+                                  public AbstractPollingReporter{
  public:
   UDPJsonReporter(MetricsRegistry& registry,
                   const std::string& hostname = "127.0.0.1",
